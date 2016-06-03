@@ -9,16 +9,21 @@ def donuts(count):
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
 
-    >>> donuts(4)
+    >> donuts(4)
     'Number of donuts: 4'
-    >>> donuts(9)
+    >> donuts(9)
     'Number of donuts: 9'
-    >>> donuts(10)
+    >> donuts(10)
     'Number of donuts: many'
-    >>> donuts(99)
+    >> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+
+    if count < 10:
+        return 'Number of donuts: %s' % count
+    else:
+        return 'Number of donuts: many'
+
 
 
 def both_ends(s):
@@ -37,8 +42,11 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
-
+    if len(s)>2:
+        return s[:2]+s[-2:]
+    else:
+        return ''
+print(both_ends('spring'),both_ends('aa'),both_ends('Hello'),both_ends('a'),both_ends('xyz'))
 
 def fix_start(s):
     """
@@ -56,7 +64,9 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+
+    return s[0] + s[1:].replace(s[0], '*')
+print(fix_start('aardvark'))
 
 
 def mix_up(a, b):
@@ -74,8 +84,8 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
-
+    return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
+print(mix_up('mix', 'pod'),mix_up('dog', 'dinner'),mix_up('gnash', 'sport'),mix_up('pezzy', 'firm'))
 
 def verbing(s):
     """
@@ -115,7 +125,7 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    """
+    dontenut_ = """
     Consider dividing a string into two halves. If the length is even,
     the front and back halves are the same length. If the length is
     odd, we'll say that the extra char goes in the front half. e.g.
