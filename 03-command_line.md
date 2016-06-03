@@ -13,7 +13,8 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > For Files
+    
 
 ---
 
@@ -28,7 +29,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+ls = bare format
+ls -a = all files and folders
+ls -l = long format with UNIX file types
+ls -lh = provides units for file/folder size
+ls -lah = long format of all files/folders with size units
+ls -t = bare format sorted by modification time
+ls -Glp = Colors the all files that are directories
 
 ---
 
@@ -36,7 +44,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -R = returns subdirectories
+ls -1 = returns each file on a new line
+ls -u = shows file access times
+ls -m = separates each item as a CSV
+ls -i = returns with inode of each file
 
 ---
 
@@ -44,7 +56,10 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs receives a standard input and executes it as an echo command. 
+One example of its use it to execute a command over files with a certain 
+criteria like removing files that are smaller than 10 kilobytes:
+"find . -size -10K | xargs rm"
 
  
 
