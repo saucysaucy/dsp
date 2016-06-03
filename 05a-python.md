@@ -12,9 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> Both lists and tuples are objects separated by a variable and indexed by position. But, tuples are immutable thus cannot change. 
- 
- Keys in dictionaries can be any object, but each key must be unique.
+>> Both lists and tuples are objects separated by a variable and indexed by position. Lists are containers that can altered, but tuples are immutable thus cannot changed change. Keys in dictionaries can be any object, but each key must be unique. Since two or more lists can hold the same information though look unique, they contain the same hash value and the computer interprets them as the same. So, lists will always produce an error if they are used as keys.  
 
 ---
 
@@ -22,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> 
+>> Both are object containers that can be iterated/altered, but lists are indexed, ordered, and can contain unique values, while sets can only contain unique, unordered values. Elements in sets are stored by their hash values and when searching for an item in a set, it looks directly for its hash value. In lists, searching is done by comparing every element with the value that is being searched. This makes sets much faster at finding values.
 
 ---
 
@@ -30,9 +28,11 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
----
+>> lambda is a tool to create one time use functions that aren't stored and that work in line with your code without a return command.It is a great tool in list comprehensions. To find the square of each element in 2 lists and add the 2 lists, we could write :
+a = [1,2,3,4,5]
+b = [6,7,8,9,10]
+map(lambda x,y: x**2 + y**2, a,b)
+------------------------------
 
 ###Q4. List Comprehension, Map &amp; Filter
 
