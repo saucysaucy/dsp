@@ -101,7 +101,15 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) > 2:
+        if s[-3:] =='ing':
+            return s+'ly'
+        else:
+            return s+'ing'
+    else:
+        return s
+print(verbing('hail'),verbing('swiming'),verbing('do'))
+
 
 
 def not_bad(s):
@@ -121,7 +129,6 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
 
 
 def front_back(a, b):
