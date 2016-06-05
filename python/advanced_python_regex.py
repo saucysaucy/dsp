@@ -46,3 +46,4 @@ unique_domains = {}
 for i in set(domains):
     unique_domains[i] = domains.count(i)
 print(sorted(unique_domains.items(),key = lambda x:x[1],reverse=True))
+

@@ -59,7 +59,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> I decided to use vim for the reason that vi is more universal across all Unix systems, so I think it's important to learn at the moment.
+>> I decided to use vim for the reason that vi is more universal across all Unix systems, so I think it's important to pick it up first.
 
 --
 
@@ -67,6 +67,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> I have been using Rodeo and Jupyter Notebooks for playing around with code and to get answers quickly. I am using PyCharm at the moment for projects because it has a lot of great features. I am trying Spyder too because it is known as more of a scientific IDE. In the future, I could see moving to something a little more light weight when I have a better idea of what features do and do not need. 
+>> I use Rodeo, Jupyter Notebooks, and Spyder in the past for playing around with code and to infer answers quickly. I am trying to pick up PyCharm, as it has a lot of features for larger projects.  
 
  
