@@ -1,6 +1,8 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 
+from numpy import ceil as ceil
+
 
 def donuts(count):
     """
@@ -24,7 +26,8 @@ def donuts(count):
     else:
         return 'Number of donuts: many'
 
-
+for i in [4,9,10,99]:
+    print (donuts(i))
 
 def both_ends(s):
     """
@@ -46,7 +49,9 @@ def both_ends(s):
         return s[:2]+s[-2:]
     else:
         return ''
-print(both_ends('spring'),both_ends('aa'),both_ends('Hello'),both_ends('a'),both_ends('xyz'))
+        
+for i in ['spring','Hello','a','xyz']:
+    print (both_ends(i))
 
 def fix_start(s):
     """
@@ -66,7 +71,9 @@ def fix_start(s):
     """
 
     return s[0] + s[1:].replace(s[0], '*')
-print(fix_start('aardvark'))
+    
+for i in ['babble','aardvark','google','donut']:
+    print (fix_start(i))
 
 
 def mix_up(a, b):
@@ -85,7 +92,11 @@ def mix_up(a, b):
     'fizzy perm'
     """
     return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
-print(mix_up('mix', 'pod'),mix_up('dog', 'dinner'),mix_up('gnash', 'sport'),mix_up('pezzy', 'firm'))
+
+for i,j in [('mix', 'pod'),('dog','dinner'),('gnash','sport'),('pezzy', 'firm')]:
+    print (mix_up(i,j))
+
+
 
 def verbing(s):
     """
@@ -108,7 +119,9 @@ def verbing(s):
             return s+'ing'
     else:
         return s
-print(verbing('hail'),verbing('swiming'),verbing('do'))
+        
+for i in ['hail','swiming','do']:
+    print(verbing(i))
 
 
 
@@ -129,6 +142,23 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
+    
+    not_find = s.find('not')    
+    bad_find = s.find('bad')
+    
+    if not_bad == -1 and not_bad == -1:
+        return s
+    elif not_find < bad_find:
+        s = s.replace(s[not_find:bad_find+3],'good')
+        return s
+    else:
+        return s
+
+for i in ['This movie is not so bad','This dinner is not that bad!','This tea is not hot','It\'s bad yet not']:
+    print (not_bad(i))
+
+    
+
 
 
 def front_back(a, b):
@@ -147,4 +177,14 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+
+    a_half = int(ceil(len(a)/2))
+    b_half = int(ceil(len(b)/2))
+    
+    return a[:a_half]+b[:b_half]+a[a_half:]+b[b_half:]
+
+for i,j,k in [('abcd','xy','abxcdy'),('abcde','xyz','abcxydez'),('Kitten','Donut','KitDontenut')]:
+    print(front_back(i,j),k)
+
+'abcd'[:2]
+

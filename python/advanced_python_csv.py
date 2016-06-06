@@ -3,8 +3,19 @@ import csv
 from advanced_python_regex import email_list
 import pandas as pd
 
-out = open('emails.csv', 'w', newline='')
-write = csv.writer(out)
-for i in email_list:
-    out.write(i)
+with open('emails.csv', 'w') as out:
+    write = csv.writer(out)
+    for i in email_list:
+        out.write(i)
+        out.write('\n')
 out.close()
+
+
+
+'''
+with open('a.csv', 'wb') as b:
+    writer = csv.writer(b)
+    for line, row in enumerate(bottle_list):
+         data = line_to_override.get(line, row)
+         writer.writerow(data)
+'''

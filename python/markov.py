@@ -12,4 +12,6 @@
 
 # There are design choices to make; feel free to experiment and shape the program as you see fit. Jeff Atwood's [Markov and You](http://blog.codinghorror.com/markov-and-you/) is a fun place to get started learning about what you're trying to make.
 
-> REPLACE THIS TEXT WITH YOUR PROGRAM
+import sys
+
+sys.argv(1)
