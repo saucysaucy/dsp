@@ -47,16 +47,28 @@ print(
 try:
     three_a = np.add(A, C)
     print('3.%i) \n%s' % (count,three_a))
+except:
+    print('not defined')
+try:
     three_b = np.subtract(A,np.transpose(C))
     print('3.%i) \n%s' % (count,three_b))
+except:
+    print('not defined')
+try:
     three_c = np.add(np.transpose(C), 3*D)
     print('3.%i) \n%s' % (count,three_c))
+except:
+    print('not defined')
+try:
     three_d = np.multiply(B, A)
     print('3.%i) \n%s' % (count,three_d))
+except:
+    print('not defined')
+try:
     three_e = np.multiply(B, np.transpose(A))
     print('3.%i) \n%s' % (count,three_e))
 except:
-    pass
+    print('not defined')
     
     #or
     #print(sys.exc_info()[3])
@@ -64,8 +76,14 @@ except:
 # Optional
 three_f = np.multiply(B,C) 
 three_g = np.multiply(C, B) 
-three_h = B**4 
-three_i = np.multiply(A, np.transpose(A)) 
-three_j = np.multiply(np.transpose(D), D)
+three_h = np.power(B,4)
+three_i = np.dot(A, np.transpose(A)) 
+three_j = np.dot(np.transpose(D), D)
 
-
+print (
+    three_f,
+    three_g,
+    three_h,
+    three_i,  
+    three_j 
+    )

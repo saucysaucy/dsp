@@ -6,14 +6,18 @@
 
 # The below skeleton is optional.  You can use it or you can write the script with an approach of your choice.
 
+# Team, Games, Wins, Losses, Draws, Goals, Goals Allowed, Points
 
 import csv
 
-  def read_data(data):
-   # COMPLETE THIS FUNCTION
+f = open('football.csv', 'r')
+read = list(csv.reader(f))[1:]
+for i in read:
+    i[1:] = list(map(lambda x : int(x), i[1:]))
+football = {i[0] : i[1:] for i in read}
 
-  def get_min_score_difference(self, parsed_data):
-    # COMPLETE THIS FUNCTION
+def get_min_score_difference(football):
+    diff = [ [k, abs(v[4]-v[5])] for k,v in list(football.items())]
+    return sorted(diff, key = lambda x : x[1])[0]
 
-  def get_team(self, index_value, parsed_data):
-    # COMPLETE THIS FUNCTION
+print(get_min_score_difference(football))

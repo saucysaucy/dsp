@@ -185,6 +185,3 @@ def front_back(a, b):
 
 for i,j,k in [('abcd','xy','abxcdy'),('abcde','xyz','abcxydez'),('Kitten','Donut','KitDontenut')]:
     print(front_back(i,j),k)
-
-'abcd'[:2]
-

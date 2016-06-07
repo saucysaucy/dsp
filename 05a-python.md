@@ -38,8 +38,27 @@ map(lambda x,y: x**2 + y**2, a,b)
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are used to take a nested for statements into one flat statement. It is really useful to quickly assign a new variables and also to reduce lists of lists. Map and filter statements can do simliar tasks, but are better for utilizing more complex functions and be inplace or setting to a new function.
 
+Map vs list comprehension:
+```
+alist = [1,2,3,4,5]
+LC_list = [i**2 for i in alist]
+mapped_list = map(lambda x : x**2, alist)
+```
+Filter vs list comprehension:
+```
+alist = [1,2,3,4,5]
+LC_list = [i for i in alist if i > 2]
+filter_list = fliter(lambda x : x > 2, alist)
+```
+
+Dictionaries and sets: 
+```
+alist = [('a', 1),('b', 2),('c', 3)]
+adict = {k:v for k,v in alist}
+
+```
 ---
 
 ###Complete the following problems by editing the files below:
@@ -53,7 +72,9 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
+
+
 
 b.  
 ```
@@ -61,7 +82,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days
 
 c.  
 ```
@@ -69,7 +90,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 

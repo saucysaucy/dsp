@@ -5,7 +5,8 @@ faculty.rename(columns = {' degree':'degree', ' title':'title', ' email':'email'
 faculty['first name'] = faculty['name'].apply(func = lambda x : x.split(' ')[0])
 faculty['last name'] = faculty['name'].apply(func = lambda x : x.split(' ')[-1])
 faculty = faculty.drop('name',axis=1)
-faculty = faculty[['first name','last name','degree','title','email']]
+faculty = faculty[['first name', 'last name', 'degree', 'title', 'email']]
+
 
 
 
@@ -22,16 +23,17 @@ deg_map = {
     'jd' : 'JD',
     '0' : 'No Degree'
     }
-    
+
 faculty['degree'] = faculty['degree']
 faculty['degree'] = faculty['degree'].apply(lambda x :x.strip(' ').replace('.','').lower())
+
 
 deg_list = faculty['degree'].tolist()
 deg_list = [i for sub in deg_list for i in sub.split(' ')]
 unique_deg = {}
 for i in set(deg_list):
     formal = deg_map[i]
-    unique_deg[formal] = deg_list.count(i)   
+    unique_deg[formal] = deg_list.count(i)
 print(sorted(unique_deg.items(),key = lambda x : x[1],reverse=True))
     
 #Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
@@ -50,5 +52,6 @@ unique_domains = {}
 
 for i in set(domains):
     unique_domains[i] = domains.count(i)
+
 print(sorted(unique_domains.items(),key = lambda x:x[1],reverse=True))
 
