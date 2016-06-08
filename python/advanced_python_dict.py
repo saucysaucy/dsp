@@ -15,7 +15,7 @@ for index, [first, last, degree, title, email] in faculty.iterrows():
         faculty_dict[last].append([degree,title,email])
     
 for i,j in faculty_dict.items():
-    print(i,j,sep=' : ')
+    print(i,j,sep=' : ',end='\n')
 
 
 """
@@ -43,7 +43,7 @@ for index, [first, last, degree, title, email] in faculty.iterrows():
     professor_dict[(first, last)] = [degree,title,email]
     
 for key, value in professor_dict.items():
-    print (key,value,sep=' : ')
+    print (key,value,sep=' : ',end='\n')
 
 """
 Print the first 3 key and value pairs of the dictionary:
@@ -54,6 +54,7 @@ Print the first 3 key and value pairs of the dictionary:
 """
 
 ####Q8.  It looks like the current dictionary is printing by first name.  Print out the dictionary key value pairs based on alphabetical orders of the last name of the professors
+
 
 
 for key,value in professor_dict.items():
