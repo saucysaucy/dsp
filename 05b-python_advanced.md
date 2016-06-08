@@ -70,6 +70,9 @@ faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['P
 Print the first 3 key and value pairs of the dictionary:
 
 ```
+('Yang', ['phd', 'Assistant Professor of Biostatistics', 'weiyang@mail.med.upenn.edu'])
+('Bilker', ['phd', 'Professor of Biostatistics', 'warren@upenn.edu'])
+('Li', ['phd', 'Assistant Professor of Biostatistics', 'liy3@email.chop.edu', ['phd', 'Associate Professor of Biostatistics', 'mingyao@mail.med.upenn.edu'], ['phd', 'Professor of Biostatistics', 'hongzhe@upenn.edu']])
 
 ```
 
