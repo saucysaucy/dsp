@@ -50,7 +50,7 @@ Filter vs list comprehension:
 ```
 alist = [1,2,3,4,5]
 LC_list = [i for i in alist if i > 2]
-filter_list = fliter(lambda x : x > 2, alist)
+filter_list = list(filter(lambda x : x > 2, alist))
 ```
 
 Dictionaries and sets: 
@@ -58,6 +58,8 @@ Dictionaries and sets:
 alist = [('a', 1),('b', 2),('c', 3)]
 adict = {k:v for k,v in alist}
 
+alist = [[1,1,1,1,1,2],[2,2,2,2,3,4,3,2,3,2],[6,5,4,5,6,5,4,5,6,4,3,2]]
+aset = [set(i) for i in alist]    # returns a list of a set
 ```
 ---
 
@@ -108,8 +110,3 @@ Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
 
 ###Q8. Parsing
 Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
-
-
-
-
-
