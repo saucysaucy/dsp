@@ -57,83 +57,34 @@ print('\n'
 
 print('\nEvaluating Expressions\n')
 
+def three_a(A,C):
+    yield np.add(A, C)
+def three_b(A,C):
+    yield np.subtract(A,np.transpose(C))
+def three_c(C,D):
+    yield np.add(np.transpose(C), 3*D)
+def three_d(B,A):
+    yield np.dot(B, A)
+def three_e(B,A):
+    yield np.dot(B, np.transpose(A))
+
+def three_f(B,C):
+    yield np.dot(B,C)
+def three_g(C,B):
+    yield np.dot(C, B)
+def three_h(B):
+    yield np.power(B,4)
+def three_i(A):
+    yield np.dot(A, np.transpose(A))
+def three_j(D):
+    yield np.dot(np.transpose(D), D)
+
 count = 1
-try:
-    three_a = np.add(A, C)
-    print('3.%i) \n%s' % (count, three_a),'\n')
-    count+=1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-try:
-    three_b = np.subtract(A,np.transpose(C))
-    print('3.%i) \n%s' % (count, three_b),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-try:
-    three_c = np.add(np.transpose(C), 3*D)
-    print('3.%i) \n%s' % (count, three_c),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-try:
-    three_d = np.dot(B, A)
-    print('3.%i) \n%s' % (count, three_d),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-try:
-    three_e = np.dot(B, np.transpose(A))
-    print('3.%i) \n%s' % (count, three_e),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n\n')
-    count += 1
-    
-# Optional
-
-print('Optional Problems\n\n')
-
-try:
-    three_f = np.dot(B,C)
-    print('3.%i) \n%s' % (count, three_f),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-
-try:
-    three_g = np.dot(C, B)
-    print('3.%i) \n%s' % (count, three_g),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-
-try:
-    three_h = np.power(B,4)
-    print('3.%i) \n%s' % (count, three_h),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count, '\n')
-    count += 1
-
-try:
-    three_i = np.dot(A, np.transpose(A))
-    print('3.%i) \n%s' % (count, three_i),'\n')
-    count += 1
-except:
-    print('3.%i) \nnot defined' % count,'\n')
-    count += 1
-
-try:
-    three_j = np.dot(np.transpose(D), D)
-    print('3.%i) \n%s' % (count, three_j),'\n')
-    count += 1
-except:
-    print('3.%s) \nnot defined')
-    count += 1
+for i in [three_a(A,C), three_b(A,C), three_c(C,D), three_d(B,A), three_e(B,A), three_f(B,C), three_g(C,B), three_h(B), three_i(A), three_j(D)]:
+    try:
+        i = tuple(i)
+        print('3.%i) \n%s' % (count, i),'\n')
+        count+=1
+    except:
+        print('3.%i) \nnot defined' % count,'\n')
+        count+=1
