@@ -38,7 +38,7 @@ map(lambda x,y: x**2 + y**2, a,b)
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> List comprehensions are used to take a nested for statements into one flat statement. It is really useful to quickly assign a new variables and also to reduce lists of lists. Map and filter statements can do simliar tasks, but are better for utilizing more complex functions and be inplace or setting to a new function.
+>> List comprehensions are used to take a nested for statements into one flat statement. It is really useful to quickly assign a new variables and also to reduce several lines of code into one. Map and filter statements can do simliar tasks, but are better for utilizing more complex functions.
 
 Map vs list comprehension:
 ```
@@ -58,8 +58,7 @@ Dictionaries and sets:
 alist = [('a', 1),('b', 2),('c', 3)]
 adict = {k:v for k,v in alist}
 
-alist = [[1,1,1,1,1,2],[2,2,2,2,3,4,3,2,3,2],[6,5,4,5,6,5,4,5,6,4,3,2]]
-aset = [set(i) for i in alist]    # returns a list of a set
+aset = { i%j for i in range(1,100) for j in range(1,100) if i%j == 0}
 ```
 ---
 

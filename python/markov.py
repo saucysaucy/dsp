@@ -14,4 +14,31 @@
 
 import sys
 
-sys.argv(1)
+stdin = sys.argv[1]
+with open(stdin, mode = 'rt',encoding='utf-8') as f:
+    text = f.read()
+
+grams = text.split()
+try:
+    word_count = int(sys.argv[2])
+    grams = grams[:word_count]
+
+except IndexError:
+    pass
+
+def n_grams(grams,num):
+    phrases = []
+    n = 0      #while loop counter
+    while n<len():         #joins num inputed number of adjacent words
+        phrases.append(' '.join(lower[n:(n+num)]))
+        n=n+1
+    unique_phrases=set(phrases)    #sets only the unique phrases
+    up_dict={}
+    for i in unique_phrases:
+        up_dict[i]=phrases.count(i)  #adds phrases and coorisponding count
+    all_phrases = sorted(up_dict.items(),key=lambda x: x[1],reverse=True)   #sorts in descending order
+    common_phrases = []
+    for i in all_phrases:  #only appends if frequency is greater than 3 times
+        if i[1]>2:
+            common_phrases.append(i)
+    return common_phrases      #returns list of common phrases by 'num' words in list
