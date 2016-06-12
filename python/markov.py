@@ -12,33 +12,67 @@
 
 # There are design choices to make; feel free to experiment and shape the program as you see fit. Jeff Atwood's [Markov and You](http://blog.codinghorror.com/markov-and-you/) is a fun place to get started learning about what you're trying to make.
 
-import sys
 
-stdin = sys.argv[1]
+
+import sys
+import random
+
+stdin = sys.argv[1]#
 with open(stdin, mode = 'rt',encoding='utf-8') as f:
     text = f.read()
 
 grams = text.split()
+grams = [word.strip(",.`\:;?!{}[]-\'\"()") for word in grams]
+grams = [i for i in grams if not len(i)==0]
+
 try:
     word_count = int(sys.argv[2])
     grams = grams[:word_count]
+except:
+    word_count = len(grams)
 
-except IndexError:
-    pass
+def trigram(grams):
+    if len(grams) < 3:
+        return "Text is too short"
+    tri = []
+    for i, word in enumerate(grams):
+        word = word.strip(",.`\:;?!{}[]")
+        if i == len(grams)-3:
+            break
+        tri.append([grams[i], grams[i + 1], grams[i + 2]])
+    return tri
 
-def n_grams(grams,num):
-    phrases = []
-    n = 0      #while loop counter
-    while n<len():         #joins num inputed number of adjacent words
-        phrases.append(' '.join(lower[n:(n+num)]))
-        n=n+1
-    unique_phrases=set(phrases)    #sets only the unique phrases
-    up_dict={}
-    for i in unique_phrases:
-        up_dict[i]=phrases.count(i)  #adds phrases and coorisponding count
-    all_phrases = sorted(up_dict.items(),key=lambda x: x[1],reverse=True)   #sorts in descending order
-    common_phrases = []
-    for i in all_phrases:  #only appends if frequency is greater than 3 times
-        if i[1]>2:
-            common_phrases.append(i)
-    return common_phrases      #returns list of common phrases by 'num' words in list
+def tri_dict(trigrams):
+    tridict = {}
+    for gram1, gram2, gram3 in trigrams:
+        k = (gram1, gram2)
+        if k in tridict:
+            tridict[k].append(gram3)
+        else:
+            tridict[k] = [gram3]
+    return tridict
+
+
+def markov_text(d):
+    if type(d)==dict:
+        pass
+    else:
+        d = tri_dict(trigram(grams))
+    egrams = dict(enumerate(grams))
+    rand = random.choice(list(egrams))
+    seed, next = egrams[rand], egrams[rand+1]
+    markov_words = []
+    for i in range(word_count):
+        markov_words.append(seed)
+        try:
+            seed, next = next, random.choice(d[(seed, next)])
+            markov_words.append(next)
+        except KeyError:
+            markov_words.append(next)
+    return ' '.join(markov_words)
+
+trigrams = trigram(grams)
+tri_to_dict = tri_dict(trigrams)
+sentence = markov_text(tri_to_dict)
+print(markov_text(grams))
+#print(sentence)
