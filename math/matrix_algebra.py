@@ -19,7 +19,7 @@ omega = np.array([[1],
                  [0],
                  [5]])
 
-# Write Dimwnsions
+# Write Dimensions
 
 print('\nMatrix and Vector Dimentions\n')
 
