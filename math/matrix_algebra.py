@@ -88,3 +88,64 @@ for i in [three_a(A,C), three_b(A,C), three_c(C,D), three_d(B,A), three_e(B,A), 
     except:
         print('3.%i) \nnot defined' % count,'\n')
         count+=1
+
+
+"""
+Matrix and Vector Dimentions
+
+Shape of A is: (2, 3)
+Shape of B is: (2, 2)
+Shape of C is: (3, 2)
+Shape of D is: (2, 3)
+Shape of mew is: (4,)
+Shape of nu is: (4,)
+Shape of omega is: (4, 1)
+
+2.1) [ 9  7 -4  9]
+2.2) [ 3 -3 -2  1]
+2.3) [ 36  12 -18  30]
+2.4) 51
+2.5) 8.60232526704
+
+Evaluating Expressions
+
+3.1)
+not defined
+
+3.2)
+(array([[-4, -7, -3],
+       [ 3,  6,  4]]),)
+
+3.3)
+(array([[14,  3,  3],
+       [ 2,  7,  9]]),)
+
+3.4)
+(array([[-1, -5, -1],
+       [ 2,  7,  4]]),)
+
+3.5)
+not defined
+
+3.6)
+not defined
+
+3.7)
+(array([[ 5, -6],
+       [ 9, -8],
+       [ 6, -6]]),)
+
+3.8)
+(array([[1, 1],
+       [0, 1]]),)
+
+3.9)
+(array([[14, 28],
+       [28, 69]]),)
+
+3.10)
+(array([[10, -4,  0],
+       [-4,  8,  8],
+       [ 0,  8, 10]]),)
+
+"""
