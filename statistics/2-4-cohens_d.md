@@ -1,13 +1,14 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
->> ## Results
-> Effective weight difference (first minus others): -0.08867236333202932 <br />
+> Results <br />
+
+>> Effective weight difference (first minus others): -0.08867236333202932 <br />
 Effective length difference (first minus others): 1.0930083433621403 <br /><br />
 The first born babies were statistally lighter than the other babies, but only by .09 standard deviations or
 about a twentieth of a pound difference. <br /> <br />
-> The pregnacy duration differs tremendusly where first born babies tend to have longer pregnacies by 1.1
+>> The pregnacy duration differs tremendusly where first born babies tend to have longer pregnacies by 1.1
 standard deviations or about 14 weeks.<br /> <br />
-> Comparing first and "other" born deviations independantly, there it can been seen that first born babies have a
+>> Comparing first and "other" born deviations independantly, there it can been seen that first born babies have a
 more predictable pregnacy duration while "other" born on average are shorter, but are generally more unpredicable.
 
 
