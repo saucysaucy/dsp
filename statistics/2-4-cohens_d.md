@@ -12,7 +12,7 @@ more predictable pregnacy duration while "other" born on average are shorter, bu
 
 
 
-```python3
+```python
 preg = nsfg.ReadFemPreg()
 def CohenEffectSize(group1, group2):
     diff = group1.mean() - group2.mean()
