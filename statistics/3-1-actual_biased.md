@@ -39,6 +39,9 @@ print(unbias_mean,bias_mean)
 
 plt.show()
 ```
+
+![fig](../img/bias_vs_unbias.png)
+
 >> By means of ThinkStats2 built in functions
 
 
@@ -52,3 +55,5 @@ thinkplot.show()
 
 print ("The mean of the Unbiased PMF is: %s" % pmf.Mean(),"The mean of the Biased PMF is: %s" % pmf_biased.Mean(),sep='\n')
 ```
+
+![tpfig](../img/bias_vs_unbias_thinkplot.png)

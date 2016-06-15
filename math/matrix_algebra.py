@@ -50,8 +50,7 @@ print('\n'
     '2.3) %s' % str(two_c),
     '2.4) %s' % str(two_d),
     '2.5) %s' % str(two_e),
-    sep='\n')
-    
+    sep = '\n')
 
 # Evaluate each of the following expressions, if it is defined; else fill in with ”not defined.” Do your work by hand on scratch paper.
 
@@ -136,8 +135,8 @@ not defined
        [ 6, -6]]),)
 
 3.8)
-(array([[1, 1],
-       [0, 1]]),)
+(array([[ 1, -4],
+       [ 0,  1]]),)
 
 3.9)
 (array([[14, 28],

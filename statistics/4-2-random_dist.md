@@ -13,3 +13,15 @@ cdf = thinkstats2.Cdf(rand)
 thinkplot.Cdf(cdf)
 thinkplot.show()
 ```
+
+>> PMF
+
+
+![pmf](../img/pmf_random_distribution.png)
+
+
+>> CDF
+
+
+![cdf](../img/cdf_random_distribution.png)
+
