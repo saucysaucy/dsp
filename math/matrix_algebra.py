@@ -73,7 +73,7 @@ def three_f(B,C):
 def three_g(C,B):
     yield np.dot(C, B)
 def three_h(B):
-    yield np.power(B,4)
+    yield np.linalg.matrix_power(B,4)
 def three_i(A):
     yield np.dot(A, np.transpose(A))
 def three_j(D):

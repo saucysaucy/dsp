@@ -4,12 +4,12 @@
 
 >> Effective weight difference (first minus others): -0.08867236333202932 <br />
 Effective length difference (first minus others): 1.0930083433621403 <br /><br />
-The first born babies were statistally lighter than the other babies, but only by .09 standard deviations or
+The first born babies were statistically lighter than the other babies, but only by .09 standard deviations or
 about a twentieth of a pound difference. <br /> <br />
->> The pregnacy duration differs tremendusly where first born babies tend to have longer pregnacies by 1.1
+>> The pregnancy duration differs tremendously where first born babies tend to have longer pregnancies by 1.1
 standard deviations or about 14 weeks.<br /> <br />
->> Comparing first and "other" born deviations independantly, there it can been seen that first born babies have a
-more predictable pregnacy duration while "other" born on average are shorter, but are generally more unpredicable.
+>> Comparing first and "other" born deviations independently, there it can been seen that first born babies have a
+more predictable pregnancy duration while "other" born on average are shorter, but are generally more unpredictable.
 
 
 
