@@ -1,6 +1,6 @@
 [Think Stats Chapter 5 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2006.html#toc50) (blue men)
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 34.2746837631 percent of the male population is in the range to be in the blue man group.
 
 
 ```python
