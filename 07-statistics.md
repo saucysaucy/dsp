@@ -103,7 +103,7 @@ Returns:
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->>
+>>Bayesian inference has a "fixed" data set where the model can be optimized by adding more samples. Thus, Bayesian inference requries prior knowledge or a prior hypothesis. Frequentists fixes parameters and relies on how close the samples compare to eachother, or frequency, to draw an inference.
 
 ---
 
