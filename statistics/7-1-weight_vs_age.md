@@ -30,7 +30,8 @@ plt.legend(fontsize= 'xx-large')
 plt.show()
 ```
 
-![percentiles](img/percentiles.png)
+
+![percentiles](.../img/percentiles.png)
 
 ```python
 pearson = birth_wgt_series.corr(other = agepreg_series, method='pearson')
@@ -46,5 +47,7 @@ ax.set_ylabel('Age at Pregnancy (yrs)', fontsize = 'xx-large')
 ax.scatter(birth_wgt_series,agepreg_series,s=2)
 plt.show()
 ```
-![scatter](img/scatter.png)
+
+
+![scatter](.../img/scatter.png)
 
