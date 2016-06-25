@@ -44,7 +44,10 @@ $ git clone https://github.com/AllenDowney/ThinkStats2.git
 
 ---
 
+###[Notebook with Solutions](ThinkStats2/code/SOLUTIONS.ipynb)
+
 ###Required Exercises
+
 
 *Include your Python code, results and explanation (where applicable).*
 
