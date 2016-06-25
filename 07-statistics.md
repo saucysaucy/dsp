@@ -69,21 +69,13 @@ This is a classic example of hypothesis testing using the normal distribution.  
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
-
 > Probability of Evis' twin was identical is 29.4%
 
->>P(I∣T)=P(T∣I)P(I)P(T∣I)P(I)+P(T∣F)P(F) <br >
-P(T) and P(I) and P(F) are the probabilities of observing TWIN, IDENTICAL, and FRATERNAL without regard to each other.
-P(T|I) a conditional probability, is the probability of observing event TWIN given that IDENTICAL is true.
-P(I|T) is the probability of observing event IDENTICAL given that TWIN is true.
-Since,
-P(T)=P(I)+P(F), assuming FRATERNAL and IDENTICAL twins are mutually exclusive and are the only twin types
-P(T∣I)=P(T∣F)=1
-P(F∣T)=1−P(I∣T) <br >
-Thus,
-P(I∣T)=P(I)P(I)+P(F) <br >
-or <br >
-P(I∣T)=P(I)P(T)
+>> ![elvis1](img/elvis1.png)
+
+>>![elvis2](img/elvis2.png)
+
+    
 
 >>By means of simulation:
 ```python
@@ -103,7 +95,7 @@ Returns:
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->>Bayesian inference has a "fixed" data set where the model can be optimized by adding more samples. Thus, Bayesian inference requries prior knowledge or a prior hypothesis. Frequentists fixes parameters and relies on how close the samples compare to eachother, or frequency, to draw an inference.
+>>Bayesian inference has a "fixed" data set where the model can be optimized by adding more samples. Thus, Bayesian inference requries prior knowledge or a prior hypothesis. Frequentists fix parameters and relies on how close the samples compare to each other, or frequency, to draw an inference. 
 
 ---
 
