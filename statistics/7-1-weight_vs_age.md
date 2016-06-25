@@ -31,7 +31,7 @@ plt.show()
 ```
 
 
-![percentiles](.../img/percentiles.png)
+![percentiles](../img/percentiles.png)
 
 ```python
 pearson = birth_wgt_series.corr(other = agepreg_series, method='pearson')
@@ -49,5 +49,5 @@ plt.show()
 ```
 
 
-![scatter](.../img/scatter.png)
+![scatter](../img/scatter.png)
 
